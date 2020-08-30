@@ -1,0 +1,57 @@
+/* general CSS rules */
+body {
+    background-color: #EEEEEE;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+/* ================= */
+header {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.headerGrid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr) ;
+    grid-template-rows: repeat(3, 5vw);
+    grid-gap: 10px;
+}
+
+.logoContainer {
+    align-items: center;
+    display: flex;
+    grid-column: 1 / 4;
+    justify-content: center;
+}
+
+.logo {
+    height: 34px;
+    width: 300px;
+}
+
+.navBarContainer {
+    grid-column: 8 / -1;
+}
+
+ul#horizontalList {
+    display: flex;
+    justify-content: space-around;
+}
+
+ul#horizontalList li {
+    display: inline;
+    font-weight: 900;
+}
+
+ul#horizontalList li a {
+    font-family: 'Courier New', Courier, monospace;
+    color: #4C4C4C;
+}
