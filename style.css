@@ -13,7 +13,7 @@ a {
 /* ================= */
 header {
     display: flex;
-    align-items: center;
+    align-items: end;
     position: sticky;
     top: 0;
 }
