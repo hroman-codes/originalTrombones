@@ -1,19 +1,47 @@
 /* general CSS rules */
+* {
+    box-sizing: border-box;
+    /* margin: 0;
+    padding: 0; */
+}
+
+a {
+    text-decoration: none;
+}
+
 body {
     background-color: #EEEEEE;
+}
+
+input[type='email'] {
+    max-width: 274px;
+    width: 100%;
+    padding: 5px;
+    max-height: 35px;
+    min-height: 35px;
+}
+
+input[type='submit'] {
+    max-width: 150px;
+    max-height: 35px;
+    min-height: 35px;
+    width: 100%;
+    height: 30px;
+    border: 0;
+    background-color: #f1c40f;
+    text-transform: uppercase;
+    margin: 15px 0 15px 0; 
+    height: 35px;
 }
 
 ul {
     list-style: none;
 }
 
-a {
-    text-decoration: none;
-}
 /* ================= */
 header {
     display: flex;
-    align-items: center;
+    align-items: end;
     position: sticky;
     top: 0;
 }
@@ -21,8 +49,8 @@ header {
 .headerGrid {
     display: grid;
     grid-template-columns: repeat(12, 1fr) ;
-    grid-template-rows: repeat(3, 5vw);
-    grid-gap: 10px;
+    grid-template-rows: repeat(1, 5vw);
+    grid-gap: 5px;
 }
 
 .logoContainer {
@@ -55,3 +83,42 @@ ul#horizontalList li a {
     font-family: 'Courier New', Courier, monospace;
     color: #4C4C4C;
 }
+
+/* ================================  */
+/* form second approach */
+.formContainer {
+    display: grid;
+    grid-template-areas: 'top'
+                         'middle';
+    grid-template-columns: 1rf;
+    grid-auto-rows: auto 1fr;
+    margin: 0.5rem;
+    /* row-gap: 0.5rem; */
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.headingTitle {
+    grid-area: top;
+    justify-self: center;
+}
+
+.sections {
+    grid-area: middle;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 3vw);
+}
+
+.sections .email {
+   grid-column: 3 / 11;
+} 
+
+.sections .button {
+    grid-row: 2 / -1;
+    grid-column: 5 / 9;
+}
+
+
+
