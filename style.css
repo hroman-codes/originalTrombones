@@ -1,8 +1,7 @@
 /* general CSS rules */
 * {
     box-sizing: border-box;
-    /* margin: 0;
-    padding: 0; */
+    margin: 0;
 }
 
 a {
@@ -37,11 +36,17 @@ input[type='submit'] {
 ul {
     list-style: none;
 }
+/* general CSS rules end  */
 
-/* ================= */
+/* CSS Variables */
+:root {
+    --iconColor: orange;
+}
+/* CSS Variables End  */
+
 header {
-    display: flex;
     align-items: end;
+    display: flex;
     position: sticky;
     top: 0;
 }
@@ -92,8 +97,7 @@ ul#horizontalList li a {
                          'middle';
     grid-template-columns: 1rf;
     grid-auto-rows: auto 1fr;
-    margin: 0.5rem;
-    /* row-gap: 0.5rem; */
+    margin: 2rem;
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -102,6 +106,7 @@ ul#horizontalList li a {
 .headingTitle {
     grid-area: top;
     justify-self: center;
+    margin-bottom: 10px;
 }
 
 .sections {
@@ -120,5 +125,49 @@ ul#horizontalList li a {
     grid-column: 5 / 9;
 }
 
+/* featuresContainer  */
+.featuresContainer {
+    display: grid;
+    grid-template-areas: 'iconOne desOne'
+                         'iconTwo desTwo'
+                         'iconThree desThree';
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    grid-column-gap: 45px;
+    grid-row-gap: 40px;
+    margin: 0 auto;
+    width: 65%;
+}
 
+#iconOne {
+    color: var(--iconColor);
+    display: grid;
+    grid-area: iconOne;
+}
 
+#iconTwo {
+    color: var(--iconColor);
+    display: grid;
+    grid-area: iconTwo;
+}
+
+#iconThree {
+    color: var(--iconColor);
+    display: grid;
+    grid-area: iconThree;
+}
+
+#desOne {
+    grid-area: desOne;
+}
+
+#desTwo {
+    display: grid;
+    grid-area: desTwo;
+}
+
+#desThree {
+    display: grid;
+    grid-area: desThree;
+}
