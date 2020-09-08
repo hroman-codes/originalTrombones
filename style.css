@@ -171,3 +171,18 @@ ul#horizontalList li a {
     display: grid;
     grid-area: desThree;
 }
+
+/* videoContainer  */
+.videoContainer {
+    display: grid;
+    grid-template-areas: '.     .       .'
+                         '.     video   .';
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr;
+}
+
+#video {
+    display: grid;
+    grid-area: video;
+}
+
