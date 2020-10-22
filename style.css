@@ -1,12 +1,20 @@
 /* general CSS rules */
 * {
-    box-sizing: border-box;
+    padding: 0;
+    box-sizing: inherit;
     margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 a {
     text-decoration: none;
 }
+
+/* general CSS rules */
 
 body {
     background-color: #EEEEEE;
@@ -265,4 +273,57 @@ ol {
 #valve {
     grid-area: valve;
     border: 1px solid black;
+}
+
+/* Media Query */
+@media screen and (max-width: 791px) {
+    .headerGrid {
+        display: grid;
+        width: 100%;
+        /* height: 100vh; */
+        grid-template-areas: 'logo'
+                             'list1';
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column-gap: 5px;
+    }
+
+    .logoContainer {
+        grid-area: logo;
+    }
+
+    .navBarContainer {
+        grid-area: list1;
+    }
+
+    .pricingContainer {
+        display: grid;
+        justify-content: center;
+        width: 50%;
+        grid-template-areas: 'tenor'
+                             'bass'
+                             'valve';
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-column-gap: 5px;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    /* #pricing {
+        display: flex;
+        justify-content: center;
+    } */
+    
+    #tenor {
+        grid-area: tenor;
+    }
+
+    #bass {
+        grid-area: bass;
+    }
+
+    #valve {
+        grid-area: valve;
+    } */
 }
